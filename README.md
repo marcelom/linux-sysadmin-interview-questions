@@ -118,17 +118,29 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What do the following commands do and how would you use them?
  * ```tee```
+   * sends output to file and terminal at smae time 
  * ```awk```
+   * pattern processing language
  * ```tr```
+   * translate
  * ```cut```
+   * split lines into delimited fields
  * ```tac```
+   * cats a file in reverse
  * ```curl```
+   * Command line URL processor
  * ```wget```
+   * Web Get, a web downloader
  * ```watch```
+   * continually executes a command
  * ```head```
+   * prints the begining lines of a file
  * ```tail```
+   * prints the ending lines of a file
 * What does an ```&``` after a command do?
+  * send it to background 
 * What does ```& disown``` after a command do?
+  * sends to bg and dettaches from the terminal
 * What is a packet filter and how does it work?
 * What is Virtual Memory?
 * What is swap and what is it used for?
@@ -155,9 +167,11 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * How to know which process listens on a specific port?
 * What is a zombie process and what could be the cause of it?
 * You run a bash script and you want to see its output on your terminal and save it to a file at the same time. How could you do it?
+  * tee it
 * Explain what echo "1" > /proc/sys/net/ipv4/ip_forward does.
 * Describe briefly the steps you need to take in order to create and install a valid certificate for the site https://foo.example.com.
 * Can you have several HTTPS virtual hosts sharing the same IP?
+  * Yes with SNI
 * What is a wildcard certificate?
 * Which Linux file types do you know?
 * What is the difference between a process and a thread? And parent and child processes after a fork system call?
