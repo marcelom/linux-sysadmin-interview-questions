@@ -54,31 +54,64 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ####[[⬆]](#toc) <a name='simple'>Simple Linux Questions:</a>
 
 * What is the name and the UID of the administrator user?
+  admin, not sure about the UID (1, maybe)
 * How to list all files, including hidden ones, in a directory?
+  ls -la
 * What is the Unix/Linux command to remove a directory and its contents?
+  rm -r
 * Which command will show you free/used memory? Does free memory exist on Linux?
+  free, top
 * How to search for the string "my konfi is the best" in files of a directory recursively?
+  * grep -r "my konfi is the best" /dir
+  * find -type f /dir -exec grep "my konfi is the best" {} \;
 * How to connect to a remote server or what is SSH?
+  * insecurely, telnet
+  * securely, ssh: ssh is Secure SHell. it is an advanced and encryted way of connecting to a remote server.
 * How to get all environment variables and how can you use them?
+  * export, printenv, env
+  * echo $PATH 
 * I get "command not found" when I run ```ifconfig -a```. What can be wrong?
+  * not in path, usually in /sbin
 * What happens if I type TAB-TAB?
+  * in an empty line, nothing
+  * in a partial line (for example "ab"), will print all commands that begin with "ab"
+  * in the context of a command, for example ls tab-tab, auto completes with all the directories in the current dir.
 * What command will show the available disk space on the Unix/Linux system?
+  * df
 * What commands do you know that can be used to check DNS records?
+  * nslookup, dig
 * What Unix/Linux commands will alter a files ownership, files permissions?
+  * chown
+  * chmod
 * What does ```chmod +x FILENAME```do?
+  * adds x to owner, group and others
 * What does the permission 0750 on a file mean?
+  * means the owner can read, write and execute, group can read and execute, others can do nothing
 * What does the permission 0750 on a directory mean?
+  * means the owner can read the file names, create/delete files and read metadata from files, 
 * How to add a new system user without login permissions?
+  * set the shell to /bin/false
 * How to add/remove a group from a user?
+  * usermod
 * What is a bash alias?
+  * command substitution, ex alias ll=ls -l
 * How do you set the mail address of the root/a user?
+  * modify the /etc/aliases
+  * create a $HOME/.forward
 * What does CTRL-c do?
+  * sends SIGINT to foreground process
 * What is in /etc/services?
+  * list of ip network ports (tcp and UDP) and names
 * How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
+  * > /dev/null 2>&1
 * What is the difference between UNIX and Linux.
 * What is the difference between Telnet and SSH?
+  * secure/encrypted. Telnet is more limited as well, as it basically just connects to a remote terminal. ssh is more advanced, as it allows port forwarding, connecting to processes, etc.
 * Explain the three load averages and what do they indicate.
+  * 1, 5, 15 minutes average.
+  * In Linux it means the average number of processes ready to run, or waiting to run.
 * Can you name a lower-case letter that is not a valid option for GNU ```ls```?
+  * ls -e
 
 
 ####[[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
