@@ -228,7 +228,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * You need to upgrade kernel at 100-1000 servers, how you would do this?
   * Ansible!
 * How can you get Host, Channel, ID, LUN of SCSI disk?
-  * /prod/scsi
+  * /proc/scsi
 * How can you limit process memory usage?
   * linux cgroups, not familiar with it
 * What is bash quick substitution/caret replace(^x^y)?
