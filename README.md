@@ -344,8 +344,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * Remove all "*.pyc" files from testdir recursively?
 * Search for "my konfu is the best" in all *.py files.
 * Replace the occurrence of "my konfu is the best" with "I'm a linux jedi master" in all *.txt files.
-* Test if p
-ort 443 on a machine with IP address X.X.X.X is reachable.
+* Test if port 443 on a machine with IP address X.X.X.X is reachable.
 * Get http://myinternal.webserver.local/test.html via telnet.
 * How to send an email without a mail client, just on the command line?
 * Write a ```get_prim``` method in python/perl/bash/pseudo.
