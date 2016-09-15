@@ -211,7 +211,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is the difference between a process and a thread? And parent and child processes after a fork system call?
   * Linux uses a 1-1 threading model, with (to the kernel) no distinction between processes and threads -- everything is simply a runnable task.
 
-  On Linux, the system call `clone` clones a task, with a configurable level of sharing. `fork()` calls `clone(least sharing)` and `pthread_create()` calls `clone(most sharing)`.
+    On Linux, the system call `clone` clones a task, with a configurable level of sharing. `fork()` calls `clone(least sharing)` and `pthread_create()` calls `clone(most sharing)`.
 
   `fork`ing costs a tiny bit more than `pthread_create`ing because of copying tables and creating COW mappings for memory.
 * What is the difference between exec and fork?
