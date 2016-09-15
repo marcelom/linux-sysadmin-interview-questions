@@ -164,11 +164,15 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is the difference between hardlinks and symlinks? What happens when you remove the source to a symlink/hardlink?
   * ...
 * What is an inode and what fields are stored in an inode?
-  * A data structure that represents a filesystem object. Contains: acl,
+  * A data structure that represents a filesystem object. Contains: userid, groupid, size, mode, additional flags, timestamps, link count, pointer to disk blocks where file content is
 * How to force/trigger a file system check on next reboot?
+  * e2tunefs, or create an empty file /forcefsck
 * What is SNMP and what is it used for?
+  * Simple Network Management Protocol, network device management, MIBs
 * What is a runlevel and how to get the current runlevel?
+  * system state, defined by a single digit integer. /sbin/runlevel
 * What is SSH port forwarding?
+  * HERE
 * What is the difference between local and remote port forwarding?
 * What are the steps to add a user to a system without using useradd/adduser?
 * What is MAJOR and MINOR numbers of special files?
