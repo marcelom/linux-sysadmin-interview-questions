@@ -172,27 +172,44 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is a runlevel and how to get the current runlevel?
   * system state, defined by a single digit integer. /sbin/runlevel
 * What is SSH port forwarding?
-  * HERE
+  * an encrypted connection between a source and destination. Can be Local or remote.
 * What is the difference between local and remote port forwarding?
+  * Local: a port in the ssh client is forwarded to the ssh server, then to a remote destination
+  * remote: a port in the ssh server is forwarded to the ssh client and then to a remote location
 * What are the steps to add a user to a system without using useradd/adduser?
+  * ...
 * What is MAJOR and MINOR numbers of special files?
+  * MAJOR defines an index in the driver table. MINOR is an identifier to the driver.
 * Describe the mknod command and when you'd use it.
+  * use it to create special device files: you pass a device type (c or b), a MAJOR and MINOR number.
 * Describe a scenario when you get a "filesystem is full" error, but 'df' shows there is free space.
+  * Out of inodes
 * Describe a scenario when deleting a file, but 'df' not showing the space being freed.
+  * Other hard links to it, the file is open by a running process, etc...
 * Describe how 'ps' works.
+  * probably prints out the entries in the process table... not sure
 * What happens to a child process that dies and has no parent process to wait for it and what’s bad about this?
+  * Creates a zombie.
 * Explain briefly each one of the process states.
+  * running, sleeping, io-waiting.
 * How to know which process listens on a specific port?
+  * netstat -lnp
 * What is a zombie process and what could be the cause of it?
+  * ...
 * You run a bash script and you want to see its output on your terminal and save it to a file at the same time. How could you do it?
   * tee it
 * Explain what echo "1" > /proc/sys/net/ipv4/ip_forward does.
+  * enables routing
 * Describe briefly the steps you need to take in order to create and install a valid certificate for the site https://foo.example.com.
+  * generate a csr, sign it, install the server key, signed cert and chained cert
 * Can you have several HTTPS virtual hosts sharing the same IP?
   * Yes with SNI
 * What is a wildcard certificate?
+  * a cert that matches names based on a wildcard:  *.google.com
 * Which Linux file types do you know?
+  * file, directory, link, device b & c, socket, pipe 
 * What is the difference between a process and a thread? And parent and child processes after a fork system call?
+  * 
 * What is the difference between exec and fork?
 * What is "nohup" used for?
 * What is the difference between these two commands?
