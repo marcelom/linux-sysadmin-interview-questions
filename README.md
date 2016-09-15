@@ -140,17 +140,31 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What does an ```&``` after a command do?
   * send it to background 
 * What does ```& disown``` after a command do?
-  * sends to bg and dettaches from the terminal
+  * sends to bg and removed the process from the list of managed processes by the shell
 * What is a packet filter and how does it work?
+  * a software that looks into portions of a packet and decided its fate based on rules.
 * What is Virtual Memory?
+  * a portion of memory, usually in disk, used to extend the RAM. RAM pages are swapped in and out as they are uneeded/needed, effectively increasing the available memory
 * What is swap and what is it used for?
+  * virtual memory in disk
 * What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
+  * A: Adress record, maps name sto IP addresses
+  * NS: Name Server record, Delegates a DNS zone to use the given authoritative name servers
+  * PTR: Pointer record, like CNAME but processing stops and only the name is returned
+  * CNAME: Canonincal name record, alias of one name to another. The DNS lookup will continue by retrying the lookup with the new name.
+  * MX: Mail Exchange, list the MTA for the domain, with priorities
 * Are there any other RRs and what are they used for?
+  * yes, several: TXT, AAAA
 * What is a Split-Horizon DNS?
+  * When a DNS server replies differently based on the source of the query
 * What is the sticky bit?
+  * Is a special unix ACL. When set in a dir, it treats files so that only the owner, root or the dir owner can rename or delete the file/dir.
 * What does the immutable bit do to a file?
+  * prevents a file from being modified/deleted
 * What is the difference between hardlinks and symlinks? What happens when you remove the source to a symlink/hardlink?
+  * ...
 * What is an inode and what fields are stored in an inode?
+  * A data structure that represents a filesystem object. Contains: 
 * How to force/trigger a file system check on next reboot?
 * What is SNMP and what is it used for?
 * What is a runlevel and how to get the current runlevel?
