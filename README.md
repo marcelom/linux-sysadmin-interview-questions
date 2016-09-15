@@ -210,23 +210,31 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * file, directory, link, device b & c, socket, pipe 
 * What is the difference between a process and a thread? And parent and child processes after a fork system call?
   * Linux uses a 1-1 threading model, with (to the kernel) no distinction between processes and threads -- everything is simply a runnable task.
-
     On Linux, the system call `clone` clones a task, with a configurable level of sharing. `fork()` calls `clone(least sharing)` and `pthread_create()` calls `clone(most sharing)`.
-
     `fork`ing costs a tiny bit more than `pthread_create`ing because of copying tables and creating COW mappings for memory.
 * What is the difference between exec and fork?
   * fork creates a new process, exec replaces the current running process
 * What is "nohup" used for?
+  * ignores SIGHUP and sends output to a file
 * What is the difference between these two commands?
  * ```myvar=hello```
+   * sets myvar for the current shell
  * ```export myvar=hello```
+   * marks an environment variable to be exported to child-processes, so that the child inherits them.
 * How many NTP servers would you configure in your local ntp.conf?
+  * at least 2
 * What does the column 'reach' mean in ```ntpq -p``` output?
+  * DONT KNOW
 * You need to upgrade kernel at 100-1000 servers, how you would do this?
+  * Ansible!
 * How can you get Host, Channel, ID, LUN of SCSI disk?
+  * /prod/scsi
 * How can you limit process memory usage?
+  * linux cgroups, not familiar with it
 * What is bash quick substitution/caret replace(^x^y)?
+  * dont know
 * Do you know of any alternative shells? If so, have you used any?
+  * csh, but barely...
 * What is a tarpipe (or, how would you go about copying everything, including hardlinks and special files, from one server to another)?
 
 ####[[⬆]](#toc) <a name='hard'>Hard Linux Questions:</a>
@@ -242,15 +250,23 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * Did you ever create RPM's, DEB's or solaris pkg's?
 * What does ```:(){ :|:& };:``` do on your system?
 * How do you catch a Linux signal on a script?
+  * trap in bash
+  * signal module in python
 * Can you catch a SIGKILL?
+  * no
 * What's happening when the Linux kernel is starting the OOM killer and how does it choose which process to kill first?
+  * selects the best = largest least essential process. All processes have an oom_score.
 * Describe the linux boot process with as much detail as possible, starting from when the system is powered on and ending when you get a prompt.
 * What's a chroot jail?
+  * way to isolate a process from the rest of the system. root processes can break the jail.
 * When trying to umount a directory it says it's busy, how to find out which PID holds the directory?
+  * lsof | grep dir
 * What's LD_PRELOAD and when it's used?
+  * instructs the dynamic linker to preload something. used for debugging programs
 * You ran a binary and nothing happened. How would you debug this?
+  * strace it
 * What are cgroups? Can you specify a scenario where you could use them?
-
+  * ? (limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes)
 
 ####[[⬆]](#toc) <a name='expert'>Expert Linux Questions:</a>
 
@@ -328,7 +344,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * Remove all "*.pyc" files from testdir recursively?
 * Search for "my konfu is the best" in all *.py files.
 * Replace the occurrence of "my konfu is the best" with "I'm a linux jedi master" in all *.txt files.
-* Test if port 443 on a machine with IP address X.X.X.X is reachable.
+* Test if p
+ort 443 on a machine with IP address X.X.X.X is reachable.
 * Get http://myinternal.webserver.local/test.html via telnet.
 * How to send an email without a mail client, just on the command line?
 * Write a ```get_prim``` method in python/perl/bash/pseudo.
