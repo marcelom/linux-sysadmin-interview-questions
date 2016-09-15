@@ -164,7 +164,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is the difference between hardlinks and symlinks? What happens when you remove the source to a symlink/hardlink?
   * ...
 * What is an inode and what fields are stored in an inode?
-  * A data structure that represents a filesystem object. Contains: 
+  * A data structure that represents a filesystem object. Contains: acl,
 * How to force/trigger a file system check on next reboot?
 * What is SNMP and what is it used for?
 * What is a runlevel and how to get the current runlevel?
