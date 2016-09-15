@@ -213,7 +213,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
     On Linux, the system call `clone` clones a task, with a configurable level of sharing. `fork()` calls `clone(least sharing)` and `pthread_create()` calls `clone(most sharing)`.
 
-  `fork`ing costs a tiny bit more than `pthread_create`ing because of copying tables and creating COW mappings for memory.
+    `fork`ing costs a tiny bit more than `pthread_create`ing because of copying tables and creating COW mappings for memory.
 * What is the difference between exec and fork?
   * fork creates a new process, exec replaces the current running process
 * What is "nohup" used for?
