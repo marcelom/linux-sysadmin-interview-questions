@@ -144,9 +144,22 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is a packet filter and how does it work?
   * a software that looks into portions of a packet and decided its fate based on rules.
 * What is Virtual Memory?
-  * a portion of memory, usually in disk, used to extend the RAM. RAM pages are swapped in and out as they are uneeded/needed, effectively increasing the available memory
+  * A memory management technique using both hardware and software.
+  * it maps virtual addresses used in a program into physical addresses.
+  * memory space is perceived by a process as a large contiguous space (or a collection of contiguous sements)
+  * address translation hardware in the cpu (MMU) automatically translates these addresses
+  * software in the OS may further extend these capabilities to provide a virtual address space that exceeds the real capacity, allowing processes to reference more memory than is actually available
+  * primary benefit is to free processes from managing their own memory in a shared space, increasing security
+  * paged virtual memory:
+    * /proc/vmstat
+    * memory is divided in pages, stored in page tables
+    * pages contain a flag to indicate if it is in real memory or not
+    * If real, MMU translates them automatically
+    * If not, a page-fault is generated and OS supervisor called to manage the page
+    * OS Supervisor creates and manages page tables
+    * Some pages need to be pinned (OS Supervidor itself, for example)
 * What is swap and what is it used for?
-  * virtual memory in disk
+  * virtual memory in disk (see above)
 * What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
   * A: Adress record, maps name sto IP addresses
   * NS: Name Server record, Delegates a DNS zone to use the given authoritative name servers
