@@ -270,6 +270,13 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What's happening when the Linux kernel is starting the OOM killer and how does it choose which process to kill first?
   * selects the best = largest least essential process. All processes have an oom_score.
 * Describe the linux boot process with as much detail as possible, starting from when the system is powered on and ending when you get a prompt.
+  * BIOS phase: does initial setup of devices/system, then loads and executes the MBR of the boot device
+    * In systems with UEFI, Boot Loader Phase can be skipped by going straight to the Kernel Phase. This is not common...
+  * Boot Loader Phase: can consist of multiple phases (like in Grub's case). Usually loads a stage-1 Grub loader, wihch will read the config from the filesystem and present a menu and CLI. After that, will load a stage-2 loader
+  * Kernel Phase:
+    * Kernel Loading Phase: loads the compressed image file and any RAM disks (initrd) if available. The image is decompressed in high memory
+    * Kenel Startup Phase: establishes memory management, and detects CPU features. Then executes a large number of initialization functions: sets up IRQ, further Memory Management, device driver initialization, mounts the initrd in read-only mode and starts init
+  * init Phase: init gets everything running the way it should be. There are several different ones: upstart, sysV, runit, systemd, etc...
 * What's a chroot jail?
   * way to isolate a process from the rest of the system. root processes can break the jail.
 * When trying to umount a directory it says it's busy, how to find out which PID holds the directory?
