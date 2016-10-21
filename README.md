@@ -204,7 +204,11 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What happens to a child process that dies and has no parent process to wait for it and what’s bad about this?
   * Creates a zombie.
 * Explain briefly each one of the process states.
-  * running, sleeping, io-waiting.
+  * D, uninterruptible sleep: sleep state that won't handle a signal right away. It will wake only as a result of a waited-upon resource becoming available or after a time-out occurs during that wait (if specified when put to sleep). It is mostly used by device drivers waiting for disk or network IO (input/output). When the process is sleeping uninterruptibly, signals accumulated during the sleep will be noticed when the process returns from the system call or trap. (https://en.wikipedia.org/wiki/Sleep_(system_call))
+  * R, running, or in the run queue
+  * S, sleeping (interruptible)
+  * T, stopped
+  * Z, zombie/defunct
 * How to know which process listens on a specific port?
   * netstat -lnp
 * What is a zombie process and what could be the cause of it?
