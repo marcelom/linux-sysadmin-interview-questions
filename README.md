@@ -158,6 +158,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
     * If not, a page-fault is generated and OS supervisor called to manage the page
     * OS Supervisor creates and manages page tables
     * Some pages need to be pinned (OS Supervidor itself, for example)
+  * pages contain a recently accessed bit, which is cleared in a schedule (every so often the os runs and resets the bits). Any page least recently used is a potential candidate to be swapped out
+  * Also, pages can also exist in disk (for example from a binary, or a mmaped file). The executer loads the code and data files as needed, thus avoiding loading all at once in memory. Dead code is actually never loaded.
 * What is swap and what is it used for?
   * virtual memory in disk (see above)
 * What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
