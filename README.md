@@ -325,6 +325,9 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is the command used to show all open ports and/or socket connections on a machine?
 * Is 300.168.0.123 a valid IPv4 address?
 * Which IP ranges/subnets are "private" or "non-routable" (RFC 1918)?
+  * 10.0.0.0/8
+  * 172.16.0.0/12
+  * 192.168.0.0/16
 * What is a VLAN?
 * What is ARP and what is it used for?
 * What is the difference between TCP and UDP?
