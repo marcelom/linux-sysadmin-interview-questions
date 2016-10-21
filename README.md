@@ -284,7 +284,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What's LD_PRELOAD and when it's used?
   * instructs the dynamic linker to preload something. used for debugging programs
 * You ran a binary and nothing happened. How would you debug this?
-  * strace it
+  * strace it, possibly track down file activity (open, read, write, close) and other system calls...
+  * -c is also useful, because it breaks down the calls in the end with some useful stats.
 * What are cgroups? Can you specify a scenario where you could use them?
   * ? (limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes)
 
