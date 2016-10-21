@@ -209,6 +209,12 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * S, sleeping (interruptible)
   * T, stopped
   * Z, zombie/defunct
+* What is a signal?
+  * A limited form of inter-process communication.
+  * An asynchronous notification sent to a process (or thread within the same process) in order to notify it of an event that occurred.
+  * When sent, the operating system interrupts the target process' normal flow of execution to deliver the signal. Execution can be interrupted during any non-atomic instruction. If the process has previously registered a signal handler, that routine is executed. Otherwise, the default signal handler is executed.
+  * 2 signals cannot be handled, and always perform the default action: SIGKILL and SIGSTOP.
+  * The sigprocmask() call can be used to block and unblock delivery of signals. Blocked signals are not delivered to the process until unblocked. Signals that cannot be ignored (SIGKILL and SIGSTOP) cannot be blocked.
 * How to know which process listens on a specific port?
   * netstat -lnp
 * What is a zombie process and what could be the cause of it?
