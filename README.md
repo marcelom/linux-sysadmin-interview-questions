@@ -342,7 +342,11 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * How do you stop a DDoS attack?
 * How can you see content of an ip packet?
 * What is IPoAC (RFC 1149)?
-
+* TCP stuff:
+  * handshake: SYN, SYN-ACK, ACK
+  * sliding window: 
+  * maximum segment size (MSS): largest amount of data, specified in bytes, that TCP is willing to receive in a single segment.
+  * teardown: four way FIN-ACK
 
 ####[[⬆]](#toc) <a name='mysql'>MySQL questions:</a>
 
