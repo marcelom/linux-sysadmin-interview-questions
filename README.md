@@ -281,7 +281,9 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * atomic, linearizable, indivisible or uninterruptible if it appears to the rest of the system to occur instantaneously.
 * Your freshly configured http server is not running after a restart, what can you do?
 * What kind of keys are in ~/.ssh/authorized_keys and what it is this file used for?
+  * contains public keys for public key authentication
 * I've added my public ssh key into authorized_keys but I'm still getting a password prompt, what can be wrong?
+  * from= (in the authorized_keys file) could be wrong
 * Did you ever create RPM's, DEB's or solaris pkg's?
 * What does ```:(){ :|:& };:``` do on your system?
 * How do you catch a Linux signal on a script?
