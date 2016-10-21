@@ -278,6 +278,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What shortcuts do you use on a regular basis?
 * What is the Linux Standard Base?
 * What is an atomic operation?
+  * atomic, linearizable, indivisible or uninterruptible if it appears to the rest of the system to occur instantaneously.
 * Your freshly configured http server is not running after a restart, what can you do?
 * What kind of keys are in ~/.ssh/authorized_keys and what it is this file used for?
 * I've added my public ssh key into authorized_keys but I'm still getting a password prompt, what can be wrong?
