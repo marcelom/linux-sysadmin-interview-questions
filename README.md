@@ -349,6 +349,9 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * sliding window: 
   * maximum segment size (MSS): largest amount of data, specified in bytes, that TCP is willing to receive in a single segment.
   * teardown: four way FIN-ACK
+* What is a router?
+* Talk about subnet masks...
+* Describe how NAT works.
 
 ####[[⬆]](#toc) <a name='mysql'>MySQL questions:</a>
 
