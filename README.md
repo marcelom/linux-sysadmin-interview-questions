@@ -240,6 +240,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * generate a csr, sign it, install the server key, signed cert and chained cert
 * Can you have several HTTPS virtual hosts sharing the same IP?
   * Yes with SNI
+  * SNI sends the connecting server name as part of the TLS negotiation phase, and the server can pick the correct certificate at that time, essentially allowing several HTTPS servers to use the same IP address.
 * What is a wildcard certificate?
   * a cert that matches names based on a wildcard:  *.google.com
 * Which Linux file types do you know?
