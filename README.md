@@ -178,6 +178,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * prevents a file from being modified/deleted
 * What is the difference between hardlinks and symlinks? What happens when you remove the source to a symlink/hardlink?
   * ...
+* Can you hardlink a directory ?
+  * no. You would violate the parent reference, and could possibly create filesystem loops, with infinite file references. 
 * What is an inode and what fields are stored in an inode?
   * A data structure that represents a filesystem object. Contains: userid, groupid, size, mode, additional flags, timestamps, link count, pointer to disk blocks where file content is
 * How to force/trigger a file system check on next reboot?
