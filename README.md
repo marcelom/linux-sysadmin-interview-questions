@@ -251,6 +251,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
     `fork`ing costs a tiny bit more than `pthread_create`ing because of copying tables and creating COW mappings for memory.
 * What is the difference between exec and fork?
   * fork creates a new process, exec replaces the current running process
+  * fork creates a new process by cloning the current running process
+  * exec replaces the current running process by overlaying the current running code
 * What is "nohup" used for?
   * ignores SIGHUP and sends output to a file
 * What is the difference between these two commands?
