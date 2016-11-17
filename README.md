@@ -329,6 +329,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
   * localhost is just a name that is defined in the /etc/hosts file. It usually points to the loopback interface 127.0.0.1.
   * It can fail for several reasons: loopback not replying to ICMP pings, name resolving to a different IP, etc...
 * What is the similarity between "ping" & "traceroute" ? How is traceroute able to find the hops.
+  * ping uses ICMP echo replies and echo requests, to determine if a particular host is up
+  * traceroute uses increasingly consecutive TTL'ed packets to determine the route to a particular destination. Once the TTL is reached, an ICMP TIME EXCEEDED packet is sent back, and the route can be determined. The packets can be sent as ICMP or event TCP/UDP packets. By default, traceroute sends UDP packets to a random port in the destination. It knows when it is done because the last packet will return a ICMP PORT UNREACHABLE message. 
 * What is the command used to show all open ports and/or socket connections on a machine?
 * Is 300.168.0.123 a valid IPv4 address?
 * Which IP ranges/subnets are "private" or "non-routable" (RFC 1918)?
