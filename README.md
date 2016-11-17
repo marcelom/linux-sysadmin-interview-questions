@@ -326,6 +326,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ####[[⬆]](#toc) <a name='network'>Networking Questions:</a>
 
 * What is localhost and why would ```ping localhost``` fail?
+  * localhost is just a name that is defined in the /etc/hosts file. It usually points to the loopback interface 127.0.0.1.
+  * It can fail for several reasons: loopback not replying to ICMP pings, name resolving to a different IP, etc...
 * What is the similarity between "ping" & "traceroute" ? How is traceroute able to find the hops.
 * What is the command used to show all open ports and/or socket connections on a machine?
 * Is 300.168.0.123 a valid IPv4 address?
