@@ -415,6 +415,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * Test if port 443 on a machine with IP address X.X.X.X is reachable.
   * nc -zv x.x.x.x 443
 * Get http://myinternal.webserver.local/test.html via telnet.
+  * telnet www.google.com 80
+  * GET /test.html
 * How to send an email without a mail client, just on the command line?
 * Write a ```get_prim``` method in python/perl/bash/pseudo.
 * Find all files which have been accessed within the last 30 days.
